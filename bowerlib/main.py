@@ -103,7 +103,7 @@ def main():
         if sys.argv[1] == 'install':
             if len(sys.argv) > 2:
                 for (i, package) in enumerate(sys.argv):
-                    if i > 2:
+                    if i > 1:
                         print("Argument "+str(i)+" is "+sys.argv[i])
                         Project(sys.argv[2]).fetch(sys.argv[i] if len(sys.argv) > 3 else None)
             else:
