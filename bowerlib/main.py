@@ -102,7 +102,9 @@ def main():
     if len(sys.argv) > 1:
         if sys.argv[1] == 'install':
             if len(sys.argv) > 2:
-                Project(sys.argv[2]).fetch(sys.argv[3] if len(sys.argv) > 3 else None)
+                for (i, package) in enumerate(sys.argv):
+                    if i > 2:
+                        Project(sys.argv[2]).fetch(sys.argv[i] if len(sys.argv) > 3 else None)
             else:
                 print("No packages or package list defined.")
     else:
