@@ -104,6 +104,7 @@ def main():
             if len(sys.argv) > 2:
                 for (i, package) in enumerate(sys.argv):
                     if i > 2:
+                        print("Argument "+i+" is "+sys.argv[i])
                         Project(sys.argv[2]).fetch(sys.argv[i] if len(sys.argv) > 3 else None)
             else:
                 print("No packages or package list defined.")
