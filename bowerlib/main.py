@@ -99,8 +99,9 @@ class Project:
 
 def main():
     logging.basicConfig()
-    if sys.argv[1] == 'install':
-        Project(sys.argv[2]).fetch(sys.argv[3] if len(sys.argv) > 3 else None)
+    if len(sys.argv) > 1:
+        if sys.argv[1] == 'install':
+            Project(sys.argv[2]).fetch(sys.argv[3] if len(sys.argv) > 3 else None)
     else:
         print("No auguments passed.")
 

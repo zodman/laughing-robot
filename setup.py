@@ -9,7 +9,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='bower.py',
-    version='1.0.1',
+    version='1.0.2',
     description='How I learned to stop worrying and love the bower',
     long_description=long_description,
     url='https://github.com/r1chardj0n3s/laughing-robot',
